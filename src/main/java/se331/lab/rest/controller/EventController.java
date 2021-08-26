@@ -85,9 +85,6 @@ public class EventController {
                 .build());
     }
     @GetMapping("events")
-    public ResponseEntity<?> getEventLists(){
-        return ResponseEntity.ok(eventList);
-    }
     public ResponseEntity<?> getEventLists(
             @RequestParam(value = "_limit",required = false)Integer perPage,
             @RequestParam(value = "_page",required = false)Integer page){
